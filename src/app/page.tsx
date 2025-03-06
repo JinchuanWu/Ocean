@@ -23,7 +23,7 @@ export default function Home() {
         </Link>
       </div>
     )), 
-    [dataList]
+    []
   );
 
   return (

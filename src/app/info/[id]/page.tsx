@@ -6,12 +6,25 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import "@/styles/page.css"; 
 
+// Define a type for the data
+type FishData = {
+  id: string;
+  name: string;
+  src: string;
+  description: string;
+  survivalStatus: string;
+  fishingSeason: string;
+  legalConsiderations: string;
+  edibility: string;
+  toxicity: string;
+};
+
 export default function Page() {
   const params = useParams();
-  const [data, setData] = useState<any | null>(null);
+  const [data, setData] = useState<FishData | null>(null);
 
   useEffect(() => {
-    if (params?.id) {
+    if (typeof params?.id === "string") {
       const foundData = dataList.find(item => item.id === params.id);
       setData(foundData || null);
     }
