@@ -5,6 +5,7 @@ import { dataList } from "@/data/data";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import "@/styles/page.css"; 
+import { useRouter } from "next/navigation";
 
 // Define a type for the data
 type FishData = {
@@ -22,6 +23,7 @@ type FishData = {
 export default function Page() {
   const params = useParams();
   const [data, setData] = useState<FishData | null>(null);
+  const router = useRouter();
 
   useEffect(() => {
     if (typeof params?.id === "string") {
@@ -34,6 +36,7 @@ export default function Page() {
 
   return (
     <div className="page-container">
+      <button className="back-button" onClick={() => router.push("/")}>Back to Home</button>
       <Image src={data.src} alt="fish" height={400} width={400} className="page-image" />
       <h1 className="page-title">Name: {data.name}</h1>
       <p><strong>Description:</strong> {data.description}</p>

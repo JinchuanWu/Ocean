@@ -54,3 +54,48 @@ body, html {
     color: #facc15; 
   }
   
+    
+ .back-button {
+  background-color: #facc15; 
+  color: black; 
+  font-size: 16px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px; 
+  transition: background-color 0.2s ease-in-out;
+}
+
+.back-button:hover {
+  background-color: #eab308; 
+}
+
+.links h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #facc15; 
+}
+
+.links a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #3b82f6; 
+  text-decoration: underline; 
+  transition: color 0.2s ease-in-out;
+}
+
+.links a:hover {
+  color: #93c5fd; 
+  text-decoration: none; 
+}
+
+.links ul {
+  padding-left: 0;
+  list-style-type: none; 
+}
+
+.links li {
+  margin-bottom: 8px; 
+}
